@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn Zoho Integration",
+  "version": "1.0",
+  "description": "Integrate LinkedIn Recruiter and Zoho CRM leads in contact modules",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*.linkedin.com/*",
+    "https://*.zoho.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "LinkedIn Zoho Integration"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*", "https://*.zoho.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
